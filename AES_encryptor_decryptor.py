@@ -13,20 +13,18 @@ class mainWindow:
         self.screenWidth = self.root.winfo_screenwidth()
         self.screenHeight = self.root.winfo_screenheight()
 
-        self.encryption = Frame(self.root,
-                                background="light gray")
+        self.encryption = Frame(self.root)
         self.encryption.pack(expand=True,
                              fill=BOTH, 
                              side=LEFT, 
-                             pady=self.screenHeight//15,
+                             pady=self.screenHeight//100,
                              padx=self.screenWidth//60)
 
-        self.decryption = Frame(self.root,
-                                background="light gray")
+        self.decryption = Frame(self.root)
         self.decryption.pack(expand=True,
                              fill=BOTH, 
                              side=RIGHT, 
-                             pady=self.screenHeight//15,
+                             pady=self.screenHeight//100,
                              padx=self.screenWidth//60)
 
         ########################
@@ -34,7 +32,7 @@ class mainWindow:
         self.encLabel = Label(self.encryption,
                             text="Encryption", 
                             font=("Arial", 18),
-                            background="gray")
+                            background="light gray")
         self.encLabel.pack(fill=X, 
                             pady=self.screenHeight//20,
                             side=TOP)
@@ -122,7 +120,7 @@ class mainWindow:
         self.decLabel = Label(self.decryption,
                             text="Decryption", 
                             font=("Arial", 18),
-                            background="gray")
+                            background="light gray")
         self.decLabel.pack(fill=X, 
                             pady=self.screenHeight//20,
                             side=TOP)
@@ -242,5 +240,4 @@ class mainWindow:
 
 if __name__ == "__main__":
     app = mainWindow()
- 
 
